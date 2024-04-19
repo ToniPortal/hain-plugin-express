@@ -2,10 +2,10 @@ const express = require('express');
 path = require('path'),
     fs = require('fs'),
     app = express(),
+    zipFolder = require('zip-folder'),
     port = (process.env.PORT || process.env.ALWAYSDATA_HTTPD_PORT || 3000),
     ip = (process.env.IP || process.env.ALWAYSDATA_HTTPD_IP);
 
-const zipFolder = require('zip-folder');
 
 
 // Chemin du dossier contenant les plugins
