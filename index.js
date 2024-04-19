@@ -1,5 +1,5 @@
-const express = require('express');
-path = require('node:path'),
+const express = require('express'),
+    path = require('path'),
     fs = require('fs'),
     app = express(),
     zipFolder = require('zip-folder'),
@@ -67,11 +67,10 @@ app.get('/list', (req, res) => {
     });
 });
 
-server = app.listen(port, ip, err => {
+app.listen(port, ip, err => {
     err ?
         console.log("Error in server setup") :
         console.log(`Worker ${process.pid} started\nServeur lancer sur: http://localhost:${port}`);
-
 });
 
 
