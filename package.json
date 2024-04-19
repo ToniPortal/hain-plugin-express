@@ -1,0 +1,17 @@
+{
+  "name": "hain-plugin-express",
+  "version": "1.0.0",
+  "description": "hain plugin server download on vercel !",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "ToniPortal",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "zip-folder": "^1.0.0"
+  }
+}
