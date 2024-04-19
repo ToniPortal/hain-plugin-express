@@ -1,5 +1,5 @@
 const express = require('express');
-path = require('path'),
+path = require('node:path'),
     fs = require('fs'),
     app = express(),
     zipFolder = require('zip-folder'),
@@ -10,6 +10,8 @@ path = require('path'),
 
 // Chemin du dossier contenant les plugins
 const pluginsDir = path.join(__dirname, 'plugins');
+
+app.get("/", (req, res) => res.send("Express on Vercel"));
 
 // Point de terminaison pour télécharger un dossier spécifique
 app.get('/download/:folderName', (req, res) => {
@@ -71,3 +73,6 @@ server = app.listen(port, ip, err => {
         console.log(`Worker ${process.pid} started\nServeur lancer sur: http://localhost:${port}`);
 
 });
+
+
+module.exports = app;
